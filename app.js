@@ -13,6 +13,8 @@ let fotosNASA = [];
 
 // --- 1. Busca os Dados na NASA ---
 async function loadItems() {
+
+    /*  */
     // Muda o texto do botão para dar feedback visual
     btnLoadMore.innerText = "A carregar...";
     btnLoadMore.disabled = true;

@@ -44,8 +44,8 @@ main {
 /* --- Organização da Galeria --- */
 .pictures-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 2fr));
+    gap: 30px;
     padding: 0 200px;
 }
 
@@ -60,7 +60,7 @@ main {
 }
 
 .gallery-item:hover {
-    outline: solid 2px #cee2ff;
+    transform: scale(1.03);
 }
 
 /* --- Bloco de Detalhes (Modal) --- */
@@ -85,17 +85,18 @@ main {
     max-width: 800px;
     max-height: 90vh; /* Não deixa ser maior que a tela */
     overflow-y: auto; /* Adiciona barra de rolagem se o texto for muito longo */
-    text-align: justify;
+    text-align: center;
 }
 
 #details-content h2, h3, p {
     color: #222e47;
+    text-align: justify;
 }
 
 #details-content img {
     max-width: 100%;
     max-height: 400px;
-    border-radius: 8px;
+    border-radius: 30px;
     margin: 15px 0;
 }
 
@@ -120,6 +121,7 @@ main {
 /* Fundo da barra */
 ::-webkit-scrollbar-track {
   background: transparent;
+  margin: 40px;
 }
 
 /* Cor da alça (o que você arrasta) */
