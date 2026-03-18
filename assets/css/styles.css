@@ -13,6 +13,7 @@ body {
 
 p {
     color: #cee2ff;
+    line-height: 1.5;
 }
 
 .header-content {
@@ -104,6 +105,7 @@ main {
     overflow-y: auto; /* Adiciona barra de rolagem se o texto for muito longo */
     text-align: center;
     margin: 0 25px;
+    outline: 2px solid #394a6f;
 }
 
 #details-content h2, h3, p {
