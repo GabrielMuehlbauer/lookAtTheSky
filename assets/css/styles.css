@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #222e47;
+    background-color: #060b16;
     font-size: 16px;
     font-family: "Google Sans Code", monospace;
 }
@@ -17,15 +17,31 @@ p {
 
 .header-content {
     text-align: center;
+    justify-content: center;
     padding: 20px 30px;
     margin-bottom: 20px;
-    background-color: #394a6f;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/galaxy-image.jpg');
+    background-size: cover;
+    background-position: center;
     color: #cee2ff;
 }
 
 .header-content h1 {
-    font-family: "Google Sans Flex", sans-serif;
-    font-weight: 500;
+    font-family: "Google Sans Code", monospace;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.header-content div div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.apresentation p {
+    text-align: justify;
+    color: #cee2ff;
 }
 
 input {
@@ -35,18 +51,19 @@ input {
     border: solid 2px #cee2ff;
     font-size: 16px;
     font-family: "Google Sans Code", monospace;
+    background-color: #cee2ff;
 }
 
 main {
     text-align: center;
+    margin: 0 25px;
 }
 
 /* --- Organização da Galeria --- */
 .pictures-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45%, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(47%, 2fr));
     gap: 30px;
-    padding: 0 200px;
 }
 
 .gallery-item {
@@ -79,13 +96,14 @@ main {
 }
 
 #details-content {
-    background-color: #fafafa;
+    background-color: #cee2ff;
     padding: 30px 50px;
     border-radius: 30px;
     max-width: 800px;
-    max-height: 90vh; /* Não deixa ser maior que a tela */
+    max-height: 75vh; /* Não deixa ser maior que a tela */
     overflow-y: auto; /* Adiciona barra de rolagem se o texto for muito longo */
     text-align: center;
+    margin: 0 25px;
 }
 
 #details-content h2, h3, p {
@@ -97,6 +115,7 @@ main {
     max-width: 100%;
     max-height: 400px;
     border-radius: 30px;
+    border: 1px solid #394a6f;
     margin: 15px 0;
 }
 
@@ -126,6 +145,6 @@ main {
 
 /* Cor da alça (o que você arrasta) */
 ::-webkit-scrollbar-thumb {
-  background-color: #cee2ff;
+  background-color: #394a6f;
   border-radius: 10px;
 }
