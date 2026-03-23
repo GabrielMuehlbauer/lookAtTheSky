@@ -1,5 +1,6 @@
 // --- Elementos do HTML ---
 const searchBar = document.getElementById("search-bar");
+const dateSearch = document.getElementById("date-search");
 const gallery = document.getElementById("gallery");
 const detailsSection = document.getElementById("details");
 const detailsContent = document.getElementById("details-content");
@@ -24,7 +25,7 @@ async function loadItems() {
     btnLoadMore.innerText = "A carregar...";
     btnLoadMore.disabled = true;
 
-    const url = `${API_URL}?api_key=${API_KEY}&count=10`;
+    const url = `${API_URL}?api_key=${API_KEY}&count=10`; // Aumente o valor de "count" para carregar mais imagens de uma vez.
 
     try {
         const res = await fetch(url); // Faz o pedido HTTP
@@ -76,13 +77,20 @@ function renderizarFotos(listaDeFotos) {
 // --- 3. Filtro de Pesquisa ---
 function aplicarFiltro() {
     const textoPesquisa = searchBar.value.toLowerCase();
-    const fotosFiltradas = fotosNASA.filter(foto =>
-        foto.title.toLowerCase().includes(textoPesquisa)
-    );
+    const dataPesquisa = dateSearch.value;
+
+    const fotosFiltradas = fotosNASA.filter(foto => {
+        const matchTitulo = foto.title.toLowerCase().includes(textoPesquisa);
+        // Se nenhuma data for escolhida, ignoramos o filtro de data. Caso contrário, comparamos.
+        const matchData = dataPesquisa === "" || foto.date === dataPesquisa;
+        
+        return matchTitulo && matchData;
+    });
     renderizarFotos(fotosFiltradas);
 }
 
 searchBar.addEventListener("input", aplicarFiltro);
+dateSearch.addEventListener("input", aplicarFiltro);
 
 // --- 4. Evento do Botão Carregar Mais ---
 btnLoadMore.addEventListener("click", loadItems);

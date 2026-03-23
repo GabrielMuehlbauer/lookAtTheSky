@@ -38,6 +38,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .apresentation p {
@@ -46,7 +48,8 @@ p {
 }
 
 input {
-    width: 75%;
+    width: 100%;
+    max-width: 300px;
     padding: 10px 20px;
     border-radius: 30px;
     border: solid 2px #cee2ff;
