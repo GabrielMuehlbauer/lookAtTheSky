@@ -7,7 +7,7 @@ const btnLoadMore = document.getElementById("btn-load-more");
 
 // --- Configurações da API ---
 const API_URL = "https://api.nasa.gov/planetary/apod";
-const API_KEY = "PXSKhwDmEQIJ3c7e3qHW2sVK0ehzt1XcLyVTxQUS";
+const API_KEY = "COLE_SUA_CHAVE_AQUI";
 
 /* 
     Esse array (fotosNASA) irá guardar algumas das imagens da NASA temporiariamente e 
