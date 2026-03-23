@@ -1,3 +1,5 @@
+![Capa do Projeto](./assets/images/readme-image.png)
+
 # Look at the Sky 🌌
 
 Uma página web interativa que consome a API pública [APOD (Astronomy Picture of the Day)](https://api.nasa.gov/) da NASA. Este projeto permite que os usuários explorem incríveis imagens do espaço de forma dinâmica, pesquisem por imagens já carregadas e leiam suas respectivas descrições ou histórias.
